@@ -3,6 +3,7 @@ html, body {
     padding: 0px;
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -48,7 +49,9 @@ nav > .wrapper {
 }
 
 
-/***/
+/*
+*
+*/
 
 
 header {
@@ -198,7 +201,7 @@ a {
 
 #blog {
     text-align: center;
-    background-color: #E3FEF7;
+    background-color: #00ADB5;
     color: #333;
 }
 
@@ -214,9 +217,254 @@ a {
     font-family: 'Times New Roman', Times, serif;
 }
 
-#blog > .wrapper > p {
+#blog > .wrapper > h4 > p {
     text-align: center;
     margin: 0px;
     padding: 0px 0px 20px 0px;
     
 }
+#blog > .wrapper > .artikel > a {
+    display: flex;
+    width: 15%;
+    margin: auto;
+}
+/*
+* contact
+*/
+
+#contact {
+    background-color: #EEEEEE;
+    color: #00ADB5;
+}
+
+#contact > .wrapper {
+    padding: 50px 0px 50px 0px;
+}
+
+#contact > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#contact > .wrapper > p {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+#contact > .wrapper > div {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact > .wrapper > div > .foto {
+    width: 30%;
+}
+
+#contact > .wrapper > div > .foto > img {
+    max-width: 100%;
+}
+
+#contact > .wrapper > div > .desc {
+    width: 70%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #333;
+}
+
+#contact > .wrapper > div > .desc > p {
+    margin: 0px 0px 10px 0px;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+#contact > .wrapper > div  > .desc > .social {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    font-size: 1.6rem;
+}
+
+#contact > .wrapper > div  > .desc > .social > a {
+    color: #77B0AA;
+}
+
+/*
+* copyright
+*/
+footer {
+    background-color: #222831;
+    color: #fff;
+    text-align: center;
+}
+
+footer > .wrapper {
+    padding: 30px 0px 30px 0px;
+}
+
+/*
+* hamburger menu
+*/
+
+button.hamburger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+button.hamburger-menu > i {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+button.hamburger-menu > i.icon-close {
+    display: none;
+}
+
+/*
+* Max-Width 1024,900,768,600
+*/
+
+@media only screen and (max-width:1024px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    #statistic > .wrapper > div > p {
+        font-size: 2.5rem;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #statistic > .wrapper > div > p > i {
+        font-size: 2.5rem;
+    }
+
+    #statistic > .wrapper > div > small {
+        font-size: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 45% 45%;
+    }
+
+    .item > img {
+        width: 8%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .menu {
+        width: 60%;
+    }
+    .header-jumbotron > h4 {
+        font-size: 1.5rem;
+    }
+    .header-jumbotron > h5 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    .header-jumbotron > p {
+        font-size: 0.8rem;
+    }
+
+    .button {
+        padding: 5px;
+    }
+
+    .button-xl {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    #statistic > .wrapper > div > p {
+        font-size: 1.5rem;
+        margin: 0px;
+    }
+    #statistic > .wrapper > div > p > i {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .grid {
+        grid-template-columns: 100%;
+    }
+
+    #statistic > .wrapper {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    #statistic > .wrapper > div {
+        display: flex;
+    }
+
+    #statistic > .wrapper > div > small {
+        font-size: 1.5rem;
+        padding-left: 10px;
+    }
+
+    #contact > .wrapper > div {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #contact > .wrapper > div > .foto {
+        width: 50%;
+    }
+
+    #contact > .wrapper > div > .foto > img {
+        max-width: 100%;
+    }
+
+    #contact > .wrapper > div > .desc {
+        width: 70%;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    #contact > .wrapper > div > .desc > .social {
+        margin: auto;
+    }
+
+    button.hamburger-menu {
+        display: inline;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .tampil {
+        display: inline;
+    }
+
+    .tampil > ul {
+        flex-direction: column;
+        background-color: #000;
+        width: 100%;
+        position: fixed;
+        top: 68px;
+        left: 0;
+    }
+
+    .tampil > ul > li {
+        padding: 10px 20px 10px 20px;
+    }
+}
+
+
